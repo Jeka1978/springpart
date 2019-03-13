@@ -1,4 +1,4 @@
-package real_spring;
+package never_use_switch;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -7,7 +7,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class Main {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConf.class);
-
+        new AnnotationConfigApplicationContext(MailConfig.class);
     }
 }

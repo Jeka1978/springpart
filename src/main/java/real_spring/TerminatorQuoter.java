@@ -1,6 +1,7 @@
 package real_spring;
 
 import my_spring.InjectRandomInt;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,7 @@ import static java.util.Arrays.asList;
  */
 
 @Component
+@Film
 public class TerminatorQuoter implements Quoter {
     @InjectRandomInt(min = 3, max = 5)
     private int repeat;
