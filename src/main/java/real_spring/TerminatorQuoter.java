@@ -1,6 +1,6 @@
 package real_spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import my_spring.InjectRandomInt;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +14,8 @@ import static java.util.Arrays.asList;
 
 @Component
 public class TerminatorQuoter implements Quoter {
+    @InjectRandomInt(min = 3, max = 5)
+    private int repeat;
 
     private List<String> messages;
 
@@ -24,6 +26,12 @@ public class TerminatorQuoter implements Quoter {
 
     @Override
     public void sayQuote() {
-        messages.forEach(System.out::println);
+        for (int i = 0; i < repeat; i++) {
+            messages.forEach(System.out::println);
+        }
     }
 }
+
+
+
+
